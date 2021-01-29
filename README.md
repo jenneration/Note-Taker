@@ -1,2 +1,2 @@
 # Note-Taker
-A CLI notetaker that lets you store important notes and even random thoughts in one groovy place!
+A CLI application that lets you store important notes or just random thoughts in one groovy place!
