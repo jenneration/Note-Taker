@@ -1,7 +1,6 @@
 const uuid = require("uuid");
 const fs = require("fs");
 const jsonDB = require("../db/db.json");
-const { send } = require("process");
 
 module.exports = (app) => {
     //Holds returned, parsed json data & gets new note entry pushed to it.
@@ -43,26 +42,28 @@ module.exports = (app) => {
         });
     });
 
-
+    //BONUS: Allow user to delete selected note(s)
     app.delete("/api/notes/:id", (req, res) => {
 
-        let deleteNoteID = req.params.id;
+        let deleteNoteID = req.params.id; //Define an id parameter name
         console.log(deleteNoteID); //TEST
 
+        //Read file as in "app.post" above 
         fs.readFile("./db/db.json", "utf8", (err, data) => {
             if (err) throw err;
-            data = JSON.parse(data);
-            res.send(data);
-            console.log(data.length);
+            data = JSON.parse(data); //Parse response data
+            res.send(data); //Send it to index.js/DOM
+            // console.log(data.length);//TEST
+
+            //Loop over parsed data to find index matching to selected id.
             for (let i = 0; i < data.length; i++) {
                 if (data[i].id === deleteNoteID) {
                     console.log(data[i]);
-                    data.splice([i], 1);
-                    console.log(data);
+                    data.splice([i], 1); //Slice/remove matched index
                 };
-
             };
 
+            //Rewrite db.json to reflect file change after data index deletion
             fs.writeFile("./db/db.json", JSON.stringify(data, null, 2), (err) => {
                 if (err) throw err;
                 console.log("Note deleted");

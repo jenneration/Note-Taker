@@ -1,37 +1,45 @@
 # Note-Taker
-This application lets you store important notes or random thoughts in one groovy place!
+This application lets you input, store, retrieve and delete important notes - or just random thoughts - in one groovy place.
 
+# Table of Contents
+- [Description](#Description)
+- [Technologies](#Technologies)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Repositories](#Repositories)
+- [Deployment](#Deployment)
+- [Screenshots](#Screenshots)
 
-## Installation
-This app utilizes
+## Description
+The application demonstrates creating a server-side API using the Express.js framework to establish API routes associated with HTTP request methods of `get`, `post`, and `delete`. 
+
+The Note Taker allows a user to enter, save, retrieve, and delete notes. 
+
+## Technology
+Technologies utilized include
 - Express.js
 - Node.js
-- npm's uuid package
+- Javascript
+- HTML & CSS
+- uuid package from npm
+- Heroku
 
-## To use
-- Install above dependencies
-- Initialize by opening the `server.js' file in the terminal
+## Installation
+To runs this application you must have Node.js installed. Once installed:
+1. Download the application files
+2. In the terminal, navigate to this file folder and install the required dependencies listed in the package.json file by entering `npm install` or `npm i` and `ENTER`.
+3. Once "installed", be sure that `Express.js` and `uuid` (a unique id generator from npm) are now in the added  `node_modules` folder.
 
-## Requirements met
-### Criteria
-- Application is fully functions and meets acceptance criteria:
-    - Landing page leads to the note taker page.
-    - User may enter, save, retrieve, notes.
-    - Entered notes appear on sidebar and when clicked appear in main note window.
-    - All icons function as required.
-- Code is modularized.
-- Required dependencies used.
-- BONUS completed: App allows user to delete notes.
+## Usage
+1. Once the above installation steps have been completed, right click on the `server.js` and `Open in an internal/external terminal`
+2. The application is launched by typing `node server.js` in the terminal.
+3. NOTE: If you're new to using backend servers remember: `Ctrl C` at an active server prompt will "end/kill" the server connection when/if necessary.
 
-### Technical
-- App front-end connects to an Express.js backend.
-- App back-end stores notes with unique IDs in a JSON file.
-- App deployed to Heroku.
+## Repository
+- GitHub Repo/Code: https://github.com/jenneration/
 
 ## Deployment
-- GitHub Repo/Code: https://github.com/jenneration/Note-Taker
-- GitHub URL:
-- Heroku URL:
+- Heroku URL:https://safe-headland-22717.herokuapp.com/
 
 ## Screenshots
 
