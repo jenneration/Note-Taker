@@ -3,6 +3,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #000;
 }
 
 .save-note {
@@ -22,12 +23,16 @@ body {
     width: 100%;
     outline: none;
     border: none;
+    /* background-color: #CCFFFF; */
+    background-color: #ACD1E9;
+    padding-left: 15px;
 }
 
 .note-textarea {
     resize: none;
     height: calc(100% - 63px);
     padding-top: 15px;
+    font-size: 1.5rem;
 }
 
 .note-title {
@@ -36,10 +41,11 @@ body {
     font-size: 3rem;
 }
 
-.note-title:read-only,
+
+/* .note-title:read-only,
 .note-textarea:read-only {
     color: #757575;
-}
+} */
 
 .list-container .card {
     height: calc(100vh - 70px);
@@ -70,4 +76,15 @@ body {
     border-right: none;
     padding: 20px;
     cursor: pointer;
+    background-color: #FFEC19;
+}
+
+.card,
+.navbar,
+.list-group-item {
+    border: solid 2px black;
+}
+
+.navbar {
+    border: solid 3px black;
 }
