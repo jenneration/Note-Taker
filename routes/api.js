@@ -66,8 +66,7 @@ module.exports = (app) => {
             fs.writeFile("./db/db.json", JSON.stringify(data, null, 2), (err) => {
                 if (err) throw err;
                 console.log("Note deleted");
-            })
-
-        })
+            });
+        });
     });
 };
