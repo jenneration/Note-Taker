@@ -14,7 +14,7 @@ This app utilizes
 
 ## Requirements met
 ### Criteria
-- Application fully functions per acceptance criteria:
+- Application is fully functions and meets acceptance criteria:
     - Landing page leads to the note taker page.
     - User may enter, save, retrieve, notes.
     - Entered notes appear on sidebar and when clicked appear in main note window.
